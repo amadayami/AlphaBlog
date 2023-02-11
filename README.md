@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Form helper link: https://guides.rubyonrails.org/form_helpers.html
