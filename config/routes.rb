@@ -7,5 +7,9 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
   #only keyword removes the other routes from the resources
-  resources :articles, only: [:show, :index, :new, :create, :edit, :update]
+  
+  #this allows us to expose only the routes that we want for the program
+  #resources :articles, only: [:show, :index, :new, :create, :edit, :update, :destroy]
+  #this exposes all routes, including REST-ful routes
+  resources :articles
 end

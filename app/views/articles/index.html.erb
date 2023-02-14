@@ -13,7 +13,9 @@
       <tr>
         <td><%= article.title %></td>
         <td><%= article.description %></td>
-        <td>Placeholder</td>
+        <td><%= button_to 'Show', article_path(article.id)%></td>
+        <%# in the course, he uses link_to but it's better to use button_to since it's more accessible/up to date %>
+        <td><%= button_to 'Delete', article_path(article.id), method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
