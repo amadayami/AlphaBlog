@@ -1,0 +1,9 @@
+.jumbotron_div {
+	margin: auto;
+	width: 50%;
+	border: 3px solid #707e8d;
+	border-radius: 18px;
+	padding: 5px;
+	
+	text-align: center;
+}
