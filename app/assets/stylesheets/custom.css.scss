@@ -1,3 +1,26 @@
 .navbar{
-  background-color: #70738d !important;
+  background-color: #c88995 !important;
+}
+.nav-link{
+  color:white;
+}
+
+.navbar-brand{
+  color: white;
+  
+}
+
+.navbar-brand:hover{
+  color: #ECECEC;
+}
+
+#home-container{
+  margin-top: 20px;
+}
+
+#jumbotron{
+  background-image: asset-url('popupwindow.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
 }
