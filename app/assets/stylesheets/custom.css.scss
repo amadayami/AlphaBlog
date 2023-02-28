@@ -23,6 +23,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  background-color: white !important;
 
   color: #c88995;
 }
@@ -30,5 +31,13 @@
 #home-button{
   background-color:#c88995;
   border-color: #c88995;
-  
+}
+
+#footer-text{
+  text-align: center;
+  font-weight: bold;
+  color: #e4d7db !important;
+  margin: auto;
+  width: 50%;
+  padding: 6px;
 }
