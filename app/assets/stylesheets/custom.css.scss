@@ -21,6 +21,14 @@
 #jumbotron{
   background-image: asset-url('popupwindow.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top left;
+  background-size: contain;
+  background-position: center;
+
+  color: #c88995;
+}
+
+#home-button{
+  background-color:#c88995;
+  border-color: #c88995;
+  
 }
