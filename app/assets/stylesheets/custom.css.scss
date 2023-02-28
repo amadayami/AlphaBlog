@@ -11,7 +11,11 @@
 }
 
 .navbar-brand:hover{
-  color: #ECECEC;
+  color: black;
+}
+
+.navbar .navbar-toggler{
+  border-color: #e6cacf !important;
 }
 
 #home-container{
@@ -36,8 +40,10 @@
 #footer-text{
   text-align: center;
   font-weight: bold;
-  color: #e4d7db !important;
+  color: white !important;
   margin: auto;
   width: 50%;
   padding: 6px;
+
+  text-decoration: none;
 }
