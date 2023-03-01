@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('Ubuntu-Title.ttf') format('truetype');
+}
+
 .navbar{
   background-color: #c88995 !important;
 }
@@ -7,7 +12,7 @@
 
 .navbar-brand{
   color: white;
-  
+  font-size: 1.7em;
 }
 
 .navbar-brand:hover{
@@ -46,4 +51,32 @@
   padding: 6px;
 
   text-decoration: none;
+}
+
+.articles-card-div {
+  border-color: white;
+}
+
+.articles-card-div * {
+  text-align: center;
+}
+
+.article-header{
+  background-color: #c88995;
+  color:white;
+  border-color: #c88995;
+}
+
+.card-body{
+  background-color: #e4d7db;
+  color: #c88995;
+}
+
+.action-button{
+  background-color:#c88995 !important;
+  border-color: #c88995;
+}
+
+* {
+  font-family: 'Ubuntu';
 }

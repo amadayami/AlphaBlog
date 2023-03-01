@@ -1,4 +1,22 @@
-<h1>Articles listing page</h1>
+<h1 class="text-center mt-4" style="color:#c88995;">Articles</h1>
+
+<div class="container-fluid">
+  <% @articles.each do |article| %>
+    <div class="row justify-content-md-center">
+      <div class="col-8 mt-4">
+        <div class="card articles-card-div">
+          <h5 class="card-header article-header"><%= article.title %></h5>
+          <div class="card-body">
+            <h5 class="card-title"><%= article.description %></h5>
+            <p class="card-text">By Fen Michael</p>
+            <a href="#" class="btn btn-primary action-button">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
 <table>
   <thead>
     <tr>
