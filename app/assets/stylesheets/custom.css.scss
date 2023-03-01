@@ -83,16 +83,19 @@
 
 .action-button:hover{
   border-color: #2a6328;
+  background-color: #2a6328;
   border-width: 3px;
 }
 
 .delete-button:hover{
   border-color: red !important;
+  background-color: red !important;
   border-width: 3px !important;
 }
 
 .edit-button:hover{
   border-color: teal !important;
+  background-color: teal !important;
   border-width: 3px !important;
 }
 
@@ -105,6 +108,10 @@
 .article-show-link:hover{
   text-decoration: underline;
   color: #2a6328;
+}
+
+.inlineButton {
+  display: inline;
 }
 
 * {
