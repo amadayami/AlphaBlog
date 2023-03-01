@@ -16,7 +16,7 @@
 }
 
 .navbar-brand:hover{
-  color: black;
+  color: #2a6328;
 }
 
 .navbar .navbar-toggler{
@@ -53,6 +53,10 @@
   text-decoration: none;
 }
 
+#footer-text:hover{
+  text-decoration: underline;
+}
+
 .articles-card-div {
   border-color: white;
 }
@@ -73,8 +77,34 @@
 }
 
 .action-button{
-  background-color:#c88995 !important;
+  background-color:#c88995;
   border-color: #c88995;
+}
+
+.action-button:hover{
+  border-color: #2a6328;
+  border-width: 3px;
+}
+
+.delete-button:hover{
+  border-color: red !important;
+  border-width: 3px !important;
+}
+
+.edit-button:hover{
+  border-color: teal !important;
+  border-width: 3px !important;
+}
+
+.article-show-link{
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+.article-show-link:hover{
+  text-decoration: underline;
+  color: #2a6328;
 }
 
 * {

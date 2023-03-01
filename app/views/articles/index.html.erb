@@ -5,11 +5,13 @@
     <div class="row justify-content-md-center">
       <div class="col-8 mt-4">
         <div class="card articles-card-div">
-          <h5 class="card-header article-header"><%= article.title %></h5>
+          <h5 class="card-header article-header"><%= link_to article.title, article_path(article), class:"article-show-link" %></h5>
           <div class="card-body">
             <h5 class="card-title"><%= article.description %></h5>
             <p class="card-text">By Fen Michael</p>
-            <a href="#" class="btn btn-primary action-button">Go somewhere</a>
+            <a href="#" class="btn btn-primary action-button">View</a>
+            <a href="#" class="btn btn-primary action-button edit-button">Edit</a>
+            <a href="#" class="btn btn-primary action-button delete-button">Delete</a>
           </div>
         </div>
       </div>
