@@ -9,28 +9,28 @@
   <% end %>
 
   <div class="row justify-content-center">
-    <div class="col-10">
+    <div class="col-10 form-style">
       <%= form_with(model: @article, local: true) do |f| %>
-        <div class="form-group row">
-          <%= f.label :title, class: "col-2 col-form-label" %><br/>
+        <div class="form-group row mt-3">
+          <%= f.label :title, class: "col-2 col-form-label dark-pink-text" %><br/>
           <div class="col-10">
-            <%= f.text_field :title, class:"form-control" %>
+            <%= f.text_field :title, class:"form-control", placeholder:"Title of article" %>
           </div>
         </div>
 
-        <div class="form-group row">
-          <%= f.label :description, class: "col-2 col-form-label" %><br/>
+        <div class="form-group row mt-3 mb-3">
+          <%= f.label :description, class: "col-2 col-form-label dark-pink-text" %><br/>
           <div class="col-10">
-            <%= f.text_area :description, rows:10, class:"form-control" %>
+            <%= f.text_area :description, rows:10, class:"form-control", placeholder:"Description of article" %>
           </div>
         </div>
 
-        <div class="form-group row">
+        <div class="form-group row mb-3">
           <%= f.submit class: "btn btn-primary action-button" %>
         </div>
       <% end %>
     </div>
 
-    <%= link_to 'Return to articles listing', articles_path %>
+    <%= link_to 'Return to articles listing', articles_path, class:"dark-pink-text return-link" %>
   </div>
 </div>
