@@ -3,7 +3,9 @@
     <div class="container-fluid py-5" style="margin: auto; width: 50%;">
       <h1 class="display-5 fw-bold">Hello, World!</h1>
       <p class="col-md-8 fs-4">This is my little blog for learning more about web development. :)</p>
-      <button class="btn btn-primary btn-lg" id="home-button" type="button">Read more</button>
+      <button class="btn btn-primary btn-lg" id="home-button" type="button">
+      <%= link_to 'Read more', articles_path, id:"home-button" %>
+      </button>
     </div>
   </div>
 </div>

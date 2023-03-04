@@ -1,8 +1,16 @@
-<h1>Showing article details</h1>
+<h1 class="text-center mt-2" style="color:#c88995;"><%= @article.title %></h1>
 
-<p><strong>Title: </strong><%= @article.title %></p>
-<p><strong>Description: </strong><%= @article.description %></p>
-
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= button_to 'Delete', article_path(@article), method: :delete, data: { turbo_confirm: "Are you sure?" } %>
-<%= link_to 'Return to articles listing', articles_path %>
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+    <div class="col-8 mt-1">
+      <div class="card articles-card-div">
+        <div class="card-body">
+          <h5 class="card-title"><%= simple_format(@article.description) %></h5>
+          <p class="card-text">By Fen Michael, created <%= time_ago_in_words(@article.created_at) %> ago/edited <%= time_ago_in_words(@article.updated_at) %> ago</p>
+          <%= link_to "Edit", edit_article_path(@article), class: "btn btn-primary action-button edit-button" %>
+          <%= button_to 'Delete', article_path(@article.id), method: :delete, data: { turbo_confirm: "Are you sure?" }, class:"btn btn-primary action-button delete-button", form: {style:"display:inline-block;"}%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
