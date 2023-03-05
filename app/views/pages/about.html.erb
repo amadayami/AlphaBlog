@@ -1,3 +1,11 @@
-<h1>This is the about page</h1>
-<%= link_to 'View articles listing', articles_path %> |
-<%= link_to 'Home page', root_path %>
+<div class="container" id="home-container">
+  <div class="p-5 mb-4 bg-light rounded-3" id="jumbotron">
+    <div class="container-fluid py-5" style="margin: auto; width: 50%;">
+      <h1 class="display-5 fw-bold">about me</h1>
+      <p class="col-md-8 fs-4">my name is fen and i'm a new developer! i love learning and cats :)</p>
+      <button class="btn btn-primary btn-lg" id="home-button" type="button">
+      <%= link_to 'Read more', articles_path, id:"home-button" %>
+      </button>
+    </div>
+  </div>
+</div>
