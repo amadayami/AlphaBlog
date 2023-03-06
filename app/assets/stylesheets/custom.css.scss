@@ -8,13 +8,13 @@
 }
 .nav-link{
   color:white;
-  font-size: 1.2em;
+  font-size: 1.4em;
   text-align: center;
 }
 
 .nav-link:hover{
   color:#2a6328;
-  font-size: 1.4em;
+  font-size: 1.5em;
 }
 
 .navbar-brand{
@@ -150,6 +150,19 @@
 
 .error-messaging{
   color: #cf2141;
+}
+
+.nav-link-drop{
+  color:#c88995;
+}
+
+.dropdown-style{
+  background-color: #e4d7db;
+  border-color: #c88995;
+}
+
+.dropdown-toggle:focus{
+  color:#2a6328;
 }
 
 body{
