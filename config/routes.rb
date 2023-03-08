@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   #resources :articles, only: [:show, :index, :new, :create, :edit, :update, :destroy]
   #this exposes all routes, including REST-ful routes
   resources :articles
+
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
 end
