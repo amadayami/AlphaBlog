@@ -1,0 +1,19 @@
+<h1 class="text-center mt-4" style="color:#c88995;">Bloggers</h1>
+
+<div class="container-fluid">
+  <% @users.each do |user| %>
+    <div class="row justify-content-md-center">
+      <div class="col-8 mt-4">
+        <div class="card articles-card-div">
+          <h5 class="card-header article-header"><%= link_to user.username, user_path(user), class:"article-show-link" %></h5>
+          <div class="card-body">
+            <h5 class="card-title"><%= pluralize(user.articles.count, "article") %></h5>
+            <p class="card-text">Joined <%= time_ago_in_words(user.created_at)%> ago</p>
+            <%= link_to 'View Profile', user, class: "btn btn-primary action-button"%>
+            <%= link_to "Edit Profile", edit_user_path(user), class: "btn btn-primary action-button edit-button" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
