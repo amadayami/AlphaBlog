@@ -6,7 +6,11 @@
           <h5 class="card-header article-header"><%= link_to article.title, article_path(article), class:"article-show-link" %></h5>
           <div class="card-body">
             <h5 class="card-title text-truncate"><%= article.description %></h5>
-            <p class="card-text"><%= article.user.username %>, created <%= time_ago_in_words(article.created_at) %> ago/edited <%= time_ago_in_words(article.updated_at) %> ago</p>
+            <p class="card-text">
+              <% if article.user %>
+                <%= link_to article.user.username, user_path(article.user), class:"user-show-link" %>, created <%= time_ago_in_words(article.created_at) %> ago/edited <%= time_ago_in_words(article.updated_at) %> ago
+              <% end %>
+            </p>
             <%= link_to 'View', article_path(article), class: "btn btn-primary action-button"%>
             <%= link_to "Edit", edit_article_path(article), class: "btn btn-primary action-button edit-button" %>
             <%= button_to 'Delete', article_path(article.id), method: :delete, data: { turbo_confirm: "Are you sure?" }, class:"btn btn-primary action-button delete-button", form: {style:"display:inline-block;"}%>
