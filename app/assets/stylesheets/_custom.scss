@@ -17,6 +17,20 @@
   font-size: 1.5em;
 }
 
+.nav-button{
+  color:white;
+  font-size: 1.4em;
+  text-align: center;
+  background-color: $primary;
+  border-style: none;
+  display: inline;
+}
+
+.nav-button:hover{
+  color:#2a6328;
+  font-size: 1.5em;
+}
+
 .navbar-brand{
   color: white;
   font-size: 1.7em;
