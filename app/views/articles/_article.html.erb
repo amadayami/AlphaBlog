@@ -12,8 +12,10 @@
               <% end %>
             </p>
             <%= link_to 'View', article_path(article), class: "btn btn-primary action-button"%>
-            <%= link_to "Edit", edit_article_path(article), class: "btn btn-primary action-button edit-button" %>
-            <%= button_to 'Delete', article_path(article.id), method: :delete, data: { turbo_confirm: "Are you sure?" }, class:"btn btn-primary action-button delete-button", form: {style:"display:inline-block;"}%>
+            <% if logged_in? && article.user == current_user %>
+              <%= link_to "Edit", edit_article_path(article), class: "btn btn-primary action-button edit-button" %>
+              <%= button_to 'Delete', article_path(article.id), method: :delete, data: { turbo_confirm: "Are you sure?" }, class:"btn btn-primary action-button delete-button", form: {style:"display:inline-block;"}%>
+            <% end %>
           </div>
         </div>
       </div>
