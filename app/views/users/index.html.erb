@@ -1,5 +1,6 @@
 <h1 class="text-center mt-4" style="color:#c88995;">Bloggers</h1>
 
+<%= will_paginate @users, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
 <div class="container-fluid">
   <% @users.each do |user| %>
     <div class="row justify-content-md-center">

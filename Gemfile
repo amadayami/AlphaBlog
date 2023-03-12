@@ -76,3 +76,4 @@ gem "cssbundling-rails", "~> 1.1"
 gem "foreman", "~> 0.87.2"
 
 gem 'will_paginate', '~> 3.3'
+gem 'will_paginate-bootstrap-style'
