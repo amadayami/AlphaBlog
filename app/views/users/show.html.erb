@@ -5,4 +5,5 @@
 <%= link_to "Edit your profile", edit_user_path(@user), class: "btn btn-sm btn-primary action-button edit-button" %>
 </div>
 <h3 class="text-center mt-4" style="color:#c88995;">Articles</h3>
+<%= will_paginate @articles, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
 <%= render 'articles/article' %>
