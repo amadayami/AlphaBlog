@@ -7,7 +7,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= simple_format(@article.description) %></h5>
           <p class="card-text"><%= @article.user.username %>, created <%= time_ago_in_words(@article.created_at) %> ago/edited <%= time_ago_in_words(@article.updated_at) %> ago</p>
-          <% if logged_in? && @article.user == current_user %>
+          <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
             <%= link_to "Edit", edit_article_path(@article), class: "btn btn-primary action-button edit-button" %>
             <%= button_to 'Delete', article_path(@article.id), method: :delete, data: { turbo_confirm: "Are you sure?" }, class:"btn btn-primary action-button delete-button", form: {style:"display:inline-block;"}%>
           <% end %>
