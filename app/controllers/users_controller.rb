@@ -19,6 +19,13 @@ class UsersController < ApplicationController
   end
 
   def update
+    if params[:commit] == "delete_account"
+      @user.destroy!
+      session[:user_id] = nil
+      redirect_to root_path
+      return
+    end
+
     if @user.update(user_params)
       flash[:notice] = "Your account information was successfully updated."
       redirect_to @user
@@ -36,6 +43,13 @@ class UsersController < ApplicationController
     else
       render 'new', status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    1/0
+    @user.destroy!
+    session[:user_id] = nil
+    redirect_to root_path
   end
 
   private

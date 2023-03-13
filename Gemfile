@@ -77,3 +77,5 @@ gem "foreman", "~> 0.87.2"
 
 gem 'will_paginate', '~> 3.3'
 gem 'will_paginate-bootstrap-style'
+
+gem 'byebug'

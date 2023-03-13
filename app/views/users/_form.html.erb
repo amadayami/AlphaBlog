@@ -27,7 +27,24 @@
 
         <div class="form-group justify-content-center row mb-3">
           <%= f.submit(@user.new_record? ? "Sign up" : "Update account", class: "btn btn-primary action-button col-auto") %>
+          <% if !@user.new_record? %>
+            <%#= f.button "Delete account", type: "submit", name: "commit", value: "delete_account", class: "btn btn-primary action-button delete-button col-auto", style:"margin-left: 5px;" %>
+            <%=
+              button_tag(
+                "Delete account", 
+                form: "optionalone", 
+                type: "submit", 
+                data: { turbo_confirm: "Are you sure?" }, 
+                name: "commit", value: "delete_account", 
+                class: "btn btn-primary action-button delete-button col-auto", 
+                style:"margin-left: 5px;"
+              ) 
+            %>
+          <% end %>
         </div>
+      <% end %>
+      <% if !@user.new_record? %>
+        <%= form_with(model: @user, method: :delete, id: "optionalone") {} %>
       <% end %>
     </div>
 
