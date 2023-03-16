@@ -1,0 +1,20 @@
+<h1 class="text-center mt-4" style="color:#c88995;">Categories</h1>
+
+<%= will_paginate @categories, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>
+
+<% @categories.each do |category| %>
+  <div class="row justify-content-md-center">
+    <div class="col-4 mt-4">
+      <div class="card articles-card-div">
+        <div class="card-body">
+          <h3 class="card-title text-truncate"><%= link_to category.name, category_path(category) %></h3>
+          <p class="card-text">
+            Created <%= time_ago_in_words(category.created_at) %> ago/edited <%= time_ago_in_words(category.updated_at) %> ago
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<%= will_paginate @categories, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center mt-4) %>
