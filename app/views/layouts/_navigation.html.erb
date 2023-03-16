@@ -26,6 +26,15 @@
             <li>
               <%= link_to "View articles", articles_path, class: "dropdown-item nav-link nav-link-drop" %>
             </li>
+            <li><hr class="dropdown-divider"></li>
+            <% if logged_in? && current_user.admin? %>
+              <li>
+                <%= link_to "Create new category", new_category_path, class: "dropdown-item nav-link nav-link-drop" %>
+              </li>
+            <% end %>
+            <li>
+              <%= link_to "View categories", categories_path, class: "dropdown-item nav-link nav-link-drop" %>
+            </li>
           </ul>
         </li>
         
