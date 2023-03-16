@@ -2,9 +2,10 @@ require "test_helper"
 
 class ArticlesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @user = users(:amelia)
-    @article = articles(:one)
-    sign_in_as @user
+    @user = User.create(username: "john", email: "john@email.com",
+                            password: "password", admin: true)
+    @article = Article.create(title: "testarticle", description: "testdescription", user: @user)
+    sign_in_as(@user)
   end
 
   test "user should be valid" do
