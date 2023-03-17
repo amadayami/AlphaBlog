@@ -5,6 +5,9 @@
     <div class="col-8 mt-1">
       <div class="card articles-card-div">
         <div class="card-body">
+          <% if @article.categories.any? %>
+            <div class=mb-2><%= render @article.categories %></div>
+          <% end %>
           <h5 class="card-title"><%= simple_format(@article.description) %></h5>
           <p class="card-text"><%= @article.user.username %>, created <%= time_ago_in_words(@article.created_at) %> ago/edited <%= time_ago_in_words(@article.updated_at) %> ago</p>
           <% if logged_in? && (@article.user == current_user || current_user.admin?) %>

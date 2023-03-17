@@ -187,6 +187,16 @@
   color: #2a6328;
 }
 
+.badge-link{
+  color: white !important;
+  text-decoration: none;
+}
+
+.badge-link:hover{
+  color: #e4e4e4;
+  text-decoration: underline;
+}
+
 body{
   padding-bottom: 100px;
 }
