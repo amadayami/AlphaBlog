@@ -3,6 +3,8 @@
 Alpha Blog is a blog with a basic structure consisting of articles, users, and 
 categories. It was built as part of the [Ruby on Rails course on Udemy](https://www.udemy.com/course/the-complete-ruby-on-rails-developer-course/).
 
+Written with Rails v7.0.4.2 and Ruby 2.7.7
+
 # Resources
 
 ## Articles
